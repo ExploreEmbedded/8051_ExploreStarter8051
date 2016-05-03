@@ -1,0 +1,7 @@
+".\Objects\main.obj",
+".\Objects\delay.obj",
+".\Objects\gpio.obj",
+".\Objects\lcd.obj",
+".\Objects\uart.obj" 
+TO ".\Objects\Starter8051BoardTest" 
+PRINT(".\Listings\Starter8051BoardTest.m51") RAMSIZE(256) 
