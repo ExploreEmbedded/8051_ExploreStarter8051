@@ -1,0 +1,160 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+D:\Github\8051_ExploreStarter8051\Code\Starter 8051 Example codes\01a-LedBlinking_Example\01a-LedBlinking_Example.uvproj
+Project File Date:  06/15/2016
+
+<h2>Output:</h2>
+compiling 01a-LedBlinking_Example.c...
+01a-LedBlinking_Example.c - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+linking...
+Program Size: data=9.0 xdata=0 code=80
+"01a-LedBlinking_Example" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling 01a-LedBlinking_Example.c...
+linking...
+Program Size: data=9.0 xdata=0 code=80
+creating hex file from "01a-LedBlinking_Example"...
+"01a-LedBlinking_Example" - 0 Error(s), 0 Warning(s).
+compiling 01a-LedBlinking_Example.c...
+01A-LEDBLINKING_EXAMPLE.C(48): error C202: 'DDRD': undefined identifier
+01A-LEDBLINKING_EXAMPLE.C(49): error C202: 'DDRD': undefined identifier
+01A-LEDBLINKING_EXAMPLE.C(50): error C202: 'DDRD': undefined identifier
+01A-LEDBLINKING_EXAMPLE.C(51): error C202: 'DDRD': undefined identifier
+01A-LEDBLINKING_EXAMPLE.C(56): error C202: 'PORT3': undefined identifier
+01A-LEDBLINKING_EXAMPLE.C(57): error C202: 'PORT3': undefined identifier
+01A-LEDBLINKING_EXAMPLE.C(58): error C202: 'PORT3': undefined identifier
+01A-LEDBLINKING_EXAMPLE.C(59): error C202: 'PORT3': undefined identifier
+01A-LEDBLINKING_EXAMPLE.C(61): error C202: 'PORT3': undefined identifier
+01A-LEDBLINKING_EXAMPLE.C(62): error C202: 'PORT3': undefined identifier
+01A-LEDBLINKING_EXAMPLE.C(63): error C202: 'PORT3': undefined identifier
+01A-LEDBLINKING_EXAMPLE.C(64): error C202: 'PORT3': undefined identifier
+01A-LEDBLINKING_EXAMPLE.C(75): error C202: 'DDRD': undefined identifier
+01A-LEDBLINKING_EXAMPLE.C(79): error C202: 'PORTD': undefined identifier
+01a-LedBlinking_Example.c - 14 Error(s), 0 Warning(s).
+compiling 01a-LedBlinking_Example.c...
+01A-LEDBLINKING_EXAMPLE.C(48): error C202: 'DDRD': undefined identifier
+01A-LEDBLINKING_EXAMPLE.C(49): error C202: 'DDRD': undefined identifier
+01A-LEDBLINKING_EXAMPLE.C(50): error C202: 'DDRD': undefined identifier
+01A-LEDBLINKING_EXAMPLE.C(51): error C202: 'DDRD': undefined identifier
+01A-LEDBLINKING_EXAMPLE.C(56): error C202: 'PORT3': undefined identifier
+01A-LEDBLINKING_EXAMPLE.C(57): error C202: 'PORT3': undefined identifier
+01A-LEDBLINKING_EXAMPLE.C(58): error C202: 'PORT3': undefined identifier
+01A-LEDBLINKING_EXAMPLE.C(59): error C202: 'PORT3': undefined identifier
+01A-LEDBLINKING_EXAMPLE.C(61): error C202: 'PORT3': undefined identifier
+01A-LEDBLINKING_EXAMPLE.C(62): error C202: 'PORT3': undefined identifier
+01A-LEDBLINKING_EXAMPLE.C(63): error C202: 'PORT3': undefined identifier
+01A-LEDBLINKING_EXAMPLE.C(64): error C202: 'PORT3': undefined identifier
+01a-LedBlinking_Example.c - 12 Error(s), 0 Warning(s).
+compiling 01a-LedBlinking_Example.c...
+01A-LEDBLINKING_EXAMPLE.C(48): error C202: 'DDRD': undefined identifier
+01A-LEDBLINKING_EXAMPLE.C(49): error C202: 'DDRD': undefined identifier
+01A-LEDBLINKING_EXAMPLE.C(50): error C202: 'DDRD': undefined identifier
+01A-LEDBLINKING_EXAMPLE.C(51): error C202: 'DDRD': undefined identifier
+01A-LEDBLINKING_EXAMPLE.C(56): error C202: 'PORT3': undefined identifier
+01A-LEDBLINKING_EXAMPLE.C(57): error C202: 'PORT3': undefined identifier
+01A-LEDBLINKING_EXAMPLE.C(58): error C202: 'PORT3': undefined identifier
+01A-LEDBLINKING_EXAMPLE.C(59): error C202: 'PORT3': undefined identifier
+01A-LEDBLINKING_EXAMPLE.C(61): error C202: 'PORT3': undefined identifier
+01A-LEDBLINKING_EXAMPLE.C(62): error C202: 'PORT3': undefined identifier
+01a-LedBlinking_Example.c - 10 Error(s), 0 Warning(s).
+compiling 01a-LedBlinking_Example.c...
+01A-LEDBLINKING_EXAMPLE.C(48): error C202: 'DDRD': undefined identifier
+01A-LEDBLINKING_EXAMPLE.C(49): error C202: 'DDRD': undefined identifier
+01A-LEDBLINKING_EXAMPLE.C(50): error C202: 'DDRD': undefined identifier
+01A-LEDBLINKING_EXAMPLE.C(51): error C202: 'DDRD': undefined identifier
+01a-LedBlinking_Example.c - 4 Error(s), 0 Warning(s).
+compiling 01a-LedBlinking_Example.c...
+01a-LedBlinking_Example.c - 0 Error(s), 0 Warning(s).
+compiling 01a-LedBlinking_Example.c...
+01a-LedBlinking_Example.c - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+linking...
+Program Size: data=9.0 xdata=0 code=92
+creating hex file from "01a-LedBlinking_Example"...
+"01a-LedBlinking_Example" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling 01a-LedBlinking_Example.c...
+linking...
+Program Size: data=9.0 xdata=0 code=92
+creating hex file from "01a-LedBlinking_Example"...
+"01a-LedBlinking_Example" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling 01a-LedBlinking_Example.c...
+linking...
+Program Size: data=9.0 xdata=0 code=84
+creating hex file from "01a-LedBlinking_Example"...
+"01a-LedBlinking_Example" - 0 Error(s), 0 Warning(s).
+compiling 01a-LedBlinking_Example.c...
+01a-LedBlinking_Example.c - 0 Error(s), 0 Warning(s).
+compiling 01a-LedBlinking_Example.c...
+01a-LedBlinking_Example.c - 0 Error(s), 0 Warning(s).
+compiling 01a-LedBlinking_Example.c...
+01A-LEDBLINKING_EXAMPLE.C(48): error C141: syntax error near '.4'
+01A-LEDBLINKING_EXAMPLE.C(48): error C141: syntax error near ')'
+01A-LEDBLINKING_EXAMPLE.C(49): error C141: syntax error near '.5'
+01A-LEDBLINKING_EXAMPLE.C(49): error C141: syntax error near ')'
+01A-LEDBLINKING_EXAMPLE.C(50): error C141: syntax error near '.6'
+01A-LEDBLINKING_EXAMPLE.C(50): error C141: syntax error near ')'
+01A-LEDBLINKING_EXAMPLE.C(51): error C141: syntax error near '.7'
+01A-LEDBLINKING_EXAMPLE.C(51): error C141: syntax error near ')'
+01A-LEDBLINKING_EXAMPLE.C(56): error C141: syntax error near '.4'
+01A-LEDBLINKING_EXAMPLE.C(56): error C141: syntax error near ')'
+01A-LEDBLINKING_EXAMPLE.C(57): error C141: syntax error near '.5'
+01A-LEDBLINKING_EXAMPLE.C(57): error C141: syntax error near ')'
+01A-LEDBLINKING_EXAMPLE.C(58): error C141: syntax error near '.6'
+01A-LEDBLINKING_EXAMPLE.C(58): error C141: syntax error near ')'
+01A-LEDBLINKING_EXAMPLE.C(59): error C141: syntax error near '.7'
+01A-LEDBLINKING_EXAMPLE.C(59): error C141: syntax error near ')'
+01A-LEDBLINKING_EXAMPLE.C(61): error C141: syntax error near '.4'
+01A-LEDBLINKING_EXAMPLE.C(61): error C141: syntax error near ')'
+01A-LEDBLINKING_EXAMPLE.C(62): error C141: syntax error near '.5'
+01A-LEDBLINKING_EXAMPLE.C(62): error C141: syntax error near ')'
+01A-LEDBLINKING_EXAMPLE.C(63): error C141: syntax error near '.6'
+01A-LEDBLINKING_EXAMPLE.C(63): error C141: syntax error near ')'
+01A-LEDBLINKING_EXAMPLE.C(64): error C141: syntax error near '.7'
+01A-LEDBLINKING_EXAMPLE.C(64): error C141: syntax error near ')'
+01a-LedBlinking_Example.c - 24 Error(s), 0 Warning(s).
+compiling 01a-LedBlinking_Example.c...
+01a-LedBlinking_Example.c - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling 01a-LedBlinking_Example.c...
+linking...
+Program Size: data=9.0 xdata=0 code=68
+creating hex file from "01a-LedBlinking_Example"...
+"01a-LedBlinking_Example" - 0 Error(s), 0 Warning(s).
+compiling 01a-LedBlinking_Example.c...
+01a-LedBlinking_Example.c - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling 01a-LedBlinking_Example.c...
+linking...
+Program Size: data=9.0 xdata=0 code=101
+creating hex file from "01a-LedBlinking_Example"...
+"01a-LedBlinking_Example" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling 01a-LedBlinking_Example.c...
+linking...
+Program Size: data=9.0 xdata=0 code=101
+creating hex file from "01a-LedBlinking_Example"...
+"01a-LedBlinking_Example" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling 01a-LedBlinking_Example.c...
+linking...
+Program Size: data=9.0 xdata=0 code=107
+creating hex file from "01a-LedBlinking_Example"...
+"01a-LedBlinking_Example" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling 01a-LedBlinking_Example.c...
+linking...
+Program Size: data=9.0 xdata=0 code=101
+creating hex file from "01a-LedBlinking_Example"...
+"01a-LedBlinking_Example" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling 01a-LedBlinking_Example.c...
+linking...
+Program Size: data=9.0 xdata=0 code=101
+creating hex file from "01a-LedBlinking_Example"...
+"01a-LedBlinking_Example" - 0 Error(s), 0 Warning(s).

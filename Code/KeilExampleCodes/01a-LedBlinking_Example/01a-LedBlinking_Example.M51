@@ -1,0 +1,97 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        06/15/2016  17:49:01  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+C:\KEIL\C51\BIN\BL51.EXE 01a-LedBlinking_Example.obj TO 01a-LedBlinking_Example RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  01a-LedBlinking_Example.obj (01A_LEDBLINKING_EXAMPLE)
+  C:\KEIL\C51\LIB\C51S.LIB (?C_STARTUP)
+
+
+LINK MAP OF MODULE:  01a-LedBlinking_Example (01A_LEDBLINKING_EXAMPLE)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            IDATA   0008H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+                    0003H     07FDH                  *** GAP ***
+            CODE    0800H     0030H     UNIT         ?PR?MAIN?01A_LEDBLINKING_EXAMPLE
+            CODE    0830H     0026H     UNIT         ?PR?_DELAY_MS?01A_LEDBLINKING_EXAMPLE
+            CODE    0856H     000CH     UNIT         ?C_C51STARTUP
+
+
+
+OVERLAY MAP OF MODULE:   01a-LedBlinking_Example (01A_LEDBLINKING_EXAMPLE)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?C_C51STARTUP
+  +--> ?PR?MAIN?01A_LEDBLINKING_EXAMPLE
+
+?PR?MAIN?01A_LEDBLINKING_EXAMPLE
+  +--> ?PR?_DELAY_MS?01A_LEDBLINKING_EXAMPLE
+
+
+
+SYMBOL TABLE OF MODULE:  01a-LedBlinking_Example (01A_LEDBLINKING_EXAMPLE)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        01A_LEDBLINKING_EXAMPLE
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:00B0H         PUBLIC        P3
+  C:0800H         PUBLIC        main
+  C:0836H         PUBLIC        _DELAY_ms
+  -------         PROC          L?0019
+  -------         ENDPROC       L?0019
+  -------         PROC          _DELAY_MS
+BL51 BANKED LINKER/LOCATER V6.22                                                      06/15/2016  17:49:01  PAGE 2
+
+
+  D:0006H         SYMBOL        ms_Count
+  -------         DO            
+  D:0004H         SYMBOL        i
+  D:0002H         SYMBOL        j
+  -------         ENDDO         
+  C:0836H         LINE#         34
+  C:0836H         LINE#         35
+  C:0836H         LINE#         37
+  C:0840H         LINE#         38
+  C:0840H         LINE#         39
+  C:084EH         LINE#         40
+  C:0855H         LINE#         41
+  -------         ENDPROC       _DELAY_MS
+  -------         PROC          MAIN
+  C:0800H         LINE#         43
+  C:0800H         LINE#         44
+  C:0800H         LINE#         46
+  C:080FH         LINE#         50
+  C:080FH         LINE#         51
+  C:080FH         LINE#         52
+  C:081CH         LINE#         53
+  C:081FH         LINE#         55
+  C:082BH         LINE#         56
+  C:082EH         LINE#         57
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        01A_LEDBLINKING_EXAMPLE
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 0056H BYTE ( 4%) *
+******************************************************************************
+
+Program Size: data=9.0 xdata=0 code=101
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
