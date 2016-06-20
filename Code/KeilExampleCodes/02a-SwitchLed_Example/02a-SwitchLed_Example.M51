@@ -1,0 +1,75 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        06/17/2016  17:01:51  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+C:\KEIL\C51\BIN\BL51.EXE 02a-SwitchLed_Example.obj TO 02a-SwitchLed_Example RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  02a-SwitchLed_Example.obj (02A_SWITCHLED_EXAMPLE)
+  C:\KEIL\C51\LIB\C51S.LIB (?C_STARTUP)
+
+
+LINK MAP OF MODULE:  02a-SwitchLed_Example (02A_SWITCHLED_EXAMPLE)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            IDATA   0008H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+                    0003H     07FDH                  *** GAP ***
+            CODE    0800H     000CH     UNIT         ?C_C51STARTUP
+            CODE    080CH     0009H     UNIT         ?PR?MAIN?02A_SWITCHLED_EXAMPLE
+
+
+
+OVERLAY MAP OF MODULE:   02a-SwitchLed_Example (02A_SWITCHLED_EXAMPLE)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?C_C51STARTUP
+  +--> ?PR?MAIN?02A_SWITCHLED_EXAMPLE
+
+
+
+SYMBOL TABLE OF MODULE:  02a-SwitchLed_Example (02A_SWITCHLED_EXAMPLE)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        02A_SWITCHLED_EXAMPLE
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:00B0H         PUBLIC        P3
+  C:080CH         PUBLIC        main
+  B:00B0H.7       PUBLIC        LED
+  B:00B0H.3       PUBLIC        Switch
+  -------         PROC          MAIN
+  C:080CH         LINE#         34
+  C:080CH         LINE#         35
+  C:080CH         LINE#         38
+  C:080FH         LINE#         40
+  C:080FH         LINE#         41
+BL51 BANKED LINKER/LOCATER V6.22                                                      06/17/2016  17:01:51  PAGE 2
+
+
+  C:080FH         LINE#         43
+  C:0813H         LINE#         45
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        02A_SWITCHLED_EXAMPLE
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 0009H BYTE ( 0%) *
+******************************************************************************
+
+Program Size: data=9.0 xdata=0 code=24
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

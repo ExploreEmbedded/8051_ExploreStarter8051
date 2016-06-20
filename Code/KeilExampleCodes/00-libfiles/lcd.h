@@ -32,7 +32,7 @@ and that both those copyright notices and this permission notice appear in suppo
 *****************************************************************************************************
 15.0: Initial version 
 ****************************************************************************************************/
-
+	 
 
 #ifndef _LCD_H_
 #define _LCD_H_
@@ -52,8 +52,8 @@ PreCompile configuration to enable or disable the API's.
     if required. This implies for other interfaces as well. 
 ****************************************************************************************************/
 #define    Enable_LCD_SetCursor              0
-#define    Enable_LCD_DisplayString          1
-#define    Enable_LCD_ScrollMessage          0
+#define    Enable_LCD_DisplayString          0
+#define    Enable_LCD_ScrollMessage          1
 #define    Enable_LCD_DisplayNumber          0
 #define    Enable_LCD_DisplayFloatNumber     0
 #define    Enable_LCD_Printf                 0

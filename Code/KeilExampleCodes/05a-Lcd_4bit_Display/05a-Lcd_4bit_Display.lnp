@@ -1,0 +1,6 @@
+"05a-Lcd_4bit_Display.obj",
+".\gpio.obj",
+".\lcd.obj",
+".\delay.obj" 
+TO "05a-Lcd_4bit_Display" 
+RAMSIZE(256) 

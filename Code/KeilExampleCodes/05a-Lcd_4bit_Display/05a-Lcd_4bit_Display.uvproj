@@ -12,14 +12,14 @@
       <ToolsetName>MCS-51</ToolsetName>
       <TargetOption>
         <TargetCommonOption>
-          <Device>AT89S52</Device>
-          <Vendor>Atmel</Vendor>
-          <Cpu>IRAM(0-0xFF) IROM(0-0x1FFF) CLOCK(33000000) MODP2</Cpu>
+          <Device>W78E052</Device>
+          <Vendor>Nuvoton</Vendor>
+          <Cpu>IRAM(0 - 0xFF) IROM(0-0x1FFF) CLOCK(40000000)</Cpu>
           <FlashUtilSpec></FlashUtilSpec>
           <StartupFile>"LIB\STARTUP.A51" ("Standard 8051 Startup Code")</StartupFile>
           <FlashDriverDll></FlashDriverDll>
-          <DeviceId>3411</DeviceId>
-          <RegisterFile>REGX51.H</RegisterFile>
+          <DeviceId>4641</DeviceId>
+          <RegisterFile>W78E052.H</RegisterFile>
           <MemoryEnv></MemoryEnv>
           <Cmp></Cmp>
           <Asm></Asm>
@@ -33,8 +33,8 @@
           <BinPath></BinPath>
           <IncludePath></IncludePath>
           <LibPath></LibPath>
-          <RegisterFilePath>Atmel\</RegisterFilePath>
-          <DBRegisterFilePath>Atmel\</DBRegisterFilePath>
+          <RegisterFilePath>Nuvoton\</RegisterFilePath>
+          <DBRegisterFilePath>Nuvoton\</DBRegisterFilePath>
           <TargetStatus>
             <Error>0</Error>
             <ExitCodeStop>0</ExitCodeStop>
@@ -42,14 +42,14 @@
             <NotGenerated>0</NotGenerated>
             <InvalidFlash>1</InvalidFlash>
           </TargetStatus>
-          <OutputDirectory>.\Objects\</OutputDirectory>
+          <OutputDirectory>.\</OutputDirectory>
           <OutputName>05a-Lcd_4bit_Display</OutputName>
           <CreateExecutable>1</CreateExecutable>
           <CreateLib>0</CreateLib>
           <CreateHexFile>1</CreateHexFile>
           <DebugInformation>1</DebugInformation>
           <BrowseInformation>1</BrowseInformation>
-          <ListingPath>.\Listings\</ListingPath>
+          <ListingPath>.\</ListingPath>
           <HexFormatSelection>0</HexFormatSelection>
           <Merge32K>0</Merge32K>
           <CreateBatchFile>0</CreateBatchFile>
@@ -100,11 +100,11 @@
           <SimDllName>S8051.DLL</SimDllName>
           <SimDllArguments></SimDllArguments>
           <SimDlgDll>DP51.DLL</SimDlgDll>
-          <SimDlgDllArguments>-pAT52</SimDlgDllArguments>
+          <SimDlgDllArguments>-p52W</SimDlgDllArguments>
           <TargetDllName>S8051.DLL</TargetDllName>
           <TargetDllArguments></TargetDllArguments>
           <TargetDlgDll>TP51.DLL</TargetDlgDll>
-          <TargetDlgDllArguments>-pAT52</TargetDlgDllArguments>
+          <TargetDlgDllArguments>-p52W</TargetDlgDllArguments>
         </DllOption>
         <DebugOption>
           <OPTHX>
@@ -155,7 +155,7 @@
         </DebugOption>
         <Utilities>
           <Flash1>
-            <UseTargetDll>0</UseTargetDll>
+            <UseTargetDll>1</UseTargetDll>
             <UseExternalTool>0</UseExternalTool>
             <RunIndependent>0</RunIndependent>
             <UpdateFlashBeforeDebugging>0</UpdateFlashBeforeDebugging>
@@ -163,7 +163,7 @@
             <DriverSelection>-1</DriverSelection>
           </Flash1>
           <Flash2></Flash2>
-          <Flash3></Flash3>
+          <Flash3>"" ()</Flash3>
           <Flash4></Flash4>
         </Utilities>
         <Target51>
@@ -182,7 +182,7 @@
             <HadIROM>1</HadIROM>
             <Moda2>0</Moda2>
             <Moddp2>0</Moddp2>
-            <Modp2>1</Modp2>
+            <Modp2>0</Modp2>
             <Mod517dp>0</Mod517dp>
             <Mod517au>0</Mod517au>
             <Mode2>0</Mode2>
@@ -347,19 +347,9 @@
           <GroupName>Source Group 1</GroupName>
           <Files>
             <File>
-              <FileName>main.c</FileName>
+              <FileName>05a-Lcd_4bit_Display.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\main.c</FilePath>
-            </File>
-            <File>
-              <FileName>delay.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\00-libfiles\delay.c</FilePath>
-            </File>
-            <File>
-              <FileName>delay.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\00-libfiles\delay.h</FilePath>
+              <FilePath>.\05a-Lcd_4bit_Display.c</FilePath>
             </File>
             <File>
               <FileName>gpio.c</FileName>
@@ -367,24 +357,14 @@
               <FilePath>..\00-libfiles\gpio.c</FilePath>
             </File>
             <File>
-              <FileName>gpio.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\00-libfiles\gpio.h</FilePath>
-            </File>
-            <File>
               <FileName>lcd.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\00-libfiles\lcd.c</FilePath>
             </File>
             <File>
-              <FileName>lcd.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\00-libfiles\lcd.h</FilePath>
-            </File>
-            <File>
-              <FileName>stdutils.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\00-libfiles\stdutils.h</FilePath>
+              <FileName>delay.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\00-libfiles\delay.c</FilePath>
             </File>
           </Files>
         </Group>
