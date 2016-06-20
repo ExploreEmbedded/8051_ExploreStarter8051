@@ -26,7 +26,6 @@ and that both those copyright notices and this permission notice appear in suppo
 **************************************************************************************************/
 
 #include "lcd.h"  
-#include "Delay.h"
 
 /*
  * 
@@ -35,16 +34,13 @@ int main()
 {
     /*Connect RS->P0.0, RW->P0.1, EN->P0.2 and data bus to P0.4 to P0.7*/
     LCD_SetUp(P0_0,P0_1,P0_2,P_NC,P_NC,P_NC,P_NC,P0_4,P0_5,P0_6,P0_7);
-    LCD_Init(2,16);
-  // while(1)
-//	 {
-	   LCD_ScrollMessage(0, "Explore Embedded");
-	   LCD_clear();
-	   LCD_DisplayString("Explore Embedded\n");
-	  // while(1);
-     //  LCD_DisplayString("Explore Embedded\n");
-	  // LCD_DisplayString("LCD 4-bit Mode\n"); 
-	 // }
+    LCD_Init(4,20);
+    
+       LCD_DisplayString("Explore Embedded\n");
+	   LCD_DisplayString("LCD 4-bit Mode\n"); 
+	   LCD_DisplayString("20 x 4 \n"); 
+	   LCD_DisplayString(":)  :O"); 
+	   while(1);
     
     return (0);
 

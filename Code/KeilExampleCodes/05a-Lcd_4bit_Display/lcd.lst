@@ -1,4 +1,4 @@
-C51 COMPILER V9.02   LCD                                                                   06/17/2016 20:03:37 PAGE 1   
+C51 COMPILER V9.02   LCD                                                                   06/20/2016 16:38:49 PAGE 1   
 
 
 C51 COMPILER V9.02, COMPILATION OF MODULE LCD
@@ -62,7 +62,7 @@ line level    source
   48                    | \ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___/ |
   49                    |  |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   | |
   50              Line0 |  | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | A | B | C | D | E | F | |
-C51 COMPILER V9.02   LCD                                                                   06/17/2016 20:03:37 PAGE 2   
+C51 COMPILER V9.02   LCD                                                                   06/20/2016 16:38:49 PAGE 2   
 
   51                    |  |___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|___| |
   52                    |  |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   | |
@@ -126,7 +126,7 @@ line level    source
  109                            gpioPins_et D5: Pin where D5 is connected 
  110                            gpioPins_et D6: Pin where D6 is connected 
  111                            gpioPins_et D7: Pin where D7 is connected 
-C51 COMPILER V9.02   LCD                                                                   06/17/2016 20:03:37 PAGE 3   
+C51 COMPILER V9.02   LCD                                                                   06/20/2016 16:38:49 PAGE 3   
 
  112           * Return value    : none
  113          
@@ -190,7 +190,7 @@ line level    source
  171          /**************************************************************************************************
  172          void LCD_Init(uint8_t v_lcdNoOfLines_u8, uint8_t v_MaxCharsPerLine_u8)
  173          ***************************************************************************************************
-C51 COMPILER V9.02   LCD                                                                   06/17/2016 20:03:37 PAGE 4   
+C51 COMPILER V9.02   LCD                                                                   06/20/2016 16:38:49 PAGE 4   
 
  174           * Function name:  LCD_Init()
  175           * I/P Arguments:  uint8_t: Number of lines of LCD
@@ -254,7 +254,7 @@ line level    source
  233          ****************************************************************************************************
  234           * I/P Arguments: uint8_t: Line number.
  235           * Return value    : none
-C51 COMPILER V9.02   LCD                                                                   06/17/2016 20:03:37 PAGE 5   
+C51 COMPILER V9.02   LCD                                                                   06/20/2016 16:38:49 PAGE 5   
 
  236          
  237           * description  :This function moves the Cursor to beginning of the specified line.
@@ -318,7 +318,7 @@ line level    source
  295           * I/P Arguments: char row,char col
  296                           row -> line number(line1=1, line2=2),
  297                                  For 2line LCD the I/P argument should be either 1 or 2.
-C51 COMPILER V9.02   LCD                                                                   06/17/2016 20:03:37 PAGE 6   
+C51 COMPILER V9.02   LCD                                                                   06/20/2016 16:38:49 PAGE 6   
 
  298                           col -> char number.
  299                                  For 16-char LCD the I/P argument should be between 0-15.
@@ -382,7 +382,7 @@ line level    source
  357   1           lcd_SendCmdSignals();
  358   1      }
  359          
-C51 COMPILER V9.02   LCD                                                                   06/17/2016 20:03:37 PAGE 7   
+C51 COMPILER V9.02   LCD                                                                   06/20/2016 16:38:49 PAGE 7   
 
  360          
  361          
@@ -435,18 +435,18 @@ line level    source
  408          
  409          ****************************************************************************************************/
  410          #if (Enable_LCD_DisplayString==1)
-              void LCD_DisplayString(char *ptr_stringPointer_u8)
-              {
-                  while((*ptr_stringPointer_u8)!=0)
-                      LCD_DisplayChar(*ptr_stringPointer_u8++); // Loop through the string and display char by char
-              }
-              #endif
+ 411          void LCD_DisplayString(char *ptr_stringPointer_u8)
+ 412          {
+ 413   1          while((*ptr_stringPointer_u8)!=0)
+ 414   1              LCD_DisplayChar(*ptr_stringPointer_u8++); // Loop through the string and display char by char
+ 415   1      }
+ 416          #endif
  417          
  418          
  419          
  420          
  421          
-C51 COMPILER V9.02   LCD                                                                   06/17/2016 20:03:37 PAGE 8   
+C51 COMPILER V9.02   LCD                                                                   06/20/2016 16:38:49 PAGE 8   
 
  422          
  423          
@@ -464,44 +464,44 @@ line level    source
  435                           will be scrolled on first line
  436          ****************************************************************************************************/
  437          #if ( Enable_LCD_ScrollMessage  == 1 )
- 438          void LCD_ScrollMessage(uint8_t v_lineNumber_u8, char *ptr_msgPointer_u8)
- 439          {
- 440   1          unsigned char i,j;
- 441   1      
- 442   1      
- 443   1          if(v_lineNumber_u8 >= LCDConfig.v_MaxSupportedLines_U8)
- 444   1              v_lineNumber_u8 = C_LcdLineZero; // Select first line if the v_lineNumber_u8 is out of range
- 445   1      
- 446   1          LCD_CmdWrite(CMD_DISPLAY_ON_CURSOR_OFF);             //Disable the Cursor
- 447   1      
- 448   1          for(i=0;ptr_msgPointer_u8[i];i++)
- 449   1          {      
- 450   2              /* Loop to display the complete string,    each time 16 chars are displayed and
- 451   2              pointer is incremented to point to next char */
- 452   2      
- 453   2      
- 454   2              LCD_GoToLine(v_lineNumber_u8);     //Move the Cursor to first line
- 455   2      
- 456   2              for(j=0;(j<LCDConfig.v_MaxSupportedChars_U8) && (ptr_msgPointer_u8[i+j]);j++)
- 457   2              {
- 458   3                  //Display first 16 Chars or till Null char is reached
- 459   3                  LCD_DisplayChar(ptr_msgPointer_u8[i+j]);
- 460   3              }
- 461   2      
- 462   2      
- 463   2              while( j<LCDConfig.v_MaxSupportedChars_U8)
- 464   2              {
- 465   3                  /*If the chars to be scrolled are less than MaxLcdChars,
- 466   3                    then display remaining chars with blank spaces*/
- 467   3                  LCD_DisplayChar(' ');
- 468   3                  j++;
- 469   3              }
- 470   2      
- 471   2              DELAY_ms(C_ScrollDelayTime_U8);
- 472   2          }
- 473   1          LCD_CmdWrite(CMD_DISPLAY_ON_CURSOR_ON);              // Finally enable the Cursor
- 474   1      }
- 475          #endif
+              void LCD_ScrollMessage(uint8_t v_lineNumber_u8, char *ptr_msgPointer_u8)
+              {
+                  unsigned char i,j;
+              
+              
+                  if(v_lineNumber_u8 >= LCDConfig.v_MaxSupportedLines_U8)
+                      v_lineNumber_u8 = C_LcdLineZero; // Select first line if the v_lineNumber_u8 is out of range
+              
+                  LCD_CmdWrite(CMD_DISPLAY_ON_CURSOR_OFF);             //Disable the Cursor
+              
+                  for(i=0;ptr_msgPointer_u8[i];i++)
+                  {      
+                      /* Loop to display the complete string,    each time 16 chars are displayed and
+                      pointer is incremented to point to next char */
+              
+              
+                      LCD_GoToLine(v_lineNumber_u8);     //Move the Cursor to first line
+              
+                      for(j=0;(j<LCDConfig.v_MaxSupportedChars_U8) && (ptr_msgPointer_u8[i+j]);j++)
+                      {
+                          //Display first 16 Chars or till Null char is reached
+                          LCD_DisplayChar(ptr_msgPointer_u8[i+j]);
+                      }
+              
+              
+                      while( j<LCDConfig.v_MaxSupportedChars_U8)
+                      {
+                          /*If the chars to be scrolled are less than MaxLcdChars,
+                            then display remaining chars with blank spaces*/
+                          LCD_DisplayChar(' ');
+                          j++;
+                      }
+              
+                      DELAY_ms(C_ScrollDelayTime_U8);
+                  }
+                  LCD_CmdWrite(CMD_DISPLAY_ON_CURSOR_ON);              // Finally enable the Cursor
+              }
+              #endif
  476          
  477          
  478          
@@ -510,7 +510,7 @@ line level    source
  481          
  482          /***************************************************************************************************
  483          void LCD_DisplayNumber(uint8_t v_numericSystem_u8, uint32_t v_number_u32, uint8_t v_numOfDigitsToDisplay_u
-C51 COMPILER V9.02   LCD                                                                   06/17/2016 20:03:37 PAGE 9   
+C51 COMPILER V9.02   LCD                                                                   06/20/2016 16:38:49 PAGE 9   
 
              -8)
  484          ****************************************************************************************************
@@ -574,7 +574,7 @@ line level    source
                           if(v_number_u32!=0)
                           {
                               /* Extract the digits from the number till it becomes zero.
-C51 COMPILER V9.02   LCD                                                                   06/17/2016 20:03:37 PAGE 10  
+C51 COMPILER V9.02   LCD                                                                   06/20/2016 16:38:49 PAGE 10  
 
                               First get the remainder and divide the number by TypeOfNum(10-Dec, 16-Hex) each time.
                               
@@ -638,7 +638,7 @@ line level    source
                   /* Dirty hack to support the floating point by extracting the integer and fractional part.
                     1.Type cast the number to int to get the integer part.
                     2.Display the extracted integer part followed by a decimal point(.)
-C51 COMPILER V9.02   LCD                                                                   06/17/2016 20:03:37 PAGE 11  
+C51 COMPILER V9.02   LCD                                                                   06/20/2016 16:38:49 PAGE 11  
 
                     3.Later the integer part is made zero by subtracting with the extracted integer value.
                     4.Finally the fractional part is multiplied by 100000 to support 6-digit precision */
@@ -702,7 +702,7 @@ line level    source
                   sint16_t v_num_s16;
                   sint32_t v_num_s32;
                   uint16_t v_num_u16;
-C51 COMPILER V9.02   LCD                                                                   06/17/2016 20:03:37 PAGE 12  
+C51 COMPILER V9.02   LCD                                                                   06/20/2016 16:38:49 PAGE 12  
 
                   uint32_t v_num_u32;
                   char *str;
@@ -766,7 +766,7 @@ line level    source
                                }
                               LCD_DisplayNumber(C_DECIMAL_U8,v_num_s32,v_numOfDigitsToDisp_u8);              
                               break;    
-C51 COMPILER V9.02   LCD                                                                   06/17/2016 20:03:37 PAGE 13  
+C51 COMPILER V9.02   LCD                                                                   06/20/2016 16:38:49 PAGE 13  
 
               
                           case 'u':    /* Argument type is of unsigned integer, hence read 16bit unsigned data */
@@ -830,7 +830,7 @@ line level    source
                           /* As '%' is not detected display/transmit the char passed */
                           LCD_DisplayChar(ch);
                       }
-C51 COMPILER V9.02   LCD                                                                   06/17/2016 20:03:37 PAGE 14  
+C51 COMPILER V9.02   LCD                                                                   06/20/2016 16:38:49 PAGE 14  
 
                   }
               
@@ -894,7 +894,7 @@ line level    source
  849   2          GPIO_PinWrite(LCDConfig.RS,0);           // Select the Command Register by pulling RS LOW
  850   2          GPIO_PinWrite(LCDConfig.RW,1);           // Select the Read Operation for busy flag by setting RW
  851   2          do
-C51 COMPILER V9.02   LCD                                                                   06/17/2016 20:03:37 PAGE 15  
+C51 COMPILER V9.02   LCD                                                                   06/20/2016 16:38:49 PAGE 15  
 
  852   2          {
  853   3      
@@ -958,7 +958,7 @@ line level    source
  911          
  912          
  913          
-C51 COMPILER V9.02   LCD                                                                   06/17/2016 20:03:37 PAGE 16  
+C51 COMPILER V9.02   LCD                                                                   06/20/2016 16:38:49 PAGE 16  
 
  914          
  915          
@@ -1022,7 +1022,7 @@ line level    source
  973          
  974          
  975          
-C51 COMPILER V9.02   LCD                                                                   06/17/2016 20:03:37 PAGE 17  
+C51 COMPILER V9.02   LCD                                                                   06/20/2016 16:38:49 PAGE 17  
 
  976          /*************************************************************************************************
  977                                 static void lcd_SendDataSignals()
@@ -1043,11 +1043,11 @@ line level    source
 
 
 MODULE INFORMATION:   STATIC OVERLAYABLE
-   CODE SIZE        =    860    ----
+   CODE SIZE        =    778    ----
    CONSTANT SIZE    =   ----    ----
    XDATA SIZE       =   ----    ----
    PDATA SIZE       =   ----    ----
-   DATA SIZE        =     20      23
+   DATA SIZE        =     20      20
    IDATA SIZE       =   ----    ----
    BIT SIZE         =   ----    ----
 END OF MODULE INFORMATION.
