@@ -1,0 +1,28 @@
+,Explore Starter 8051,,,
+,,,,
+Id,Designator,Package,Quantity,Designation
+1,P8,"5X2 R/A, Through hole",1,Box header
+2,CON2,"Through hole , PCB mounting",1,USB-MINI-B
+3,CON1,"Through hole , PCB mounting",1,BARREL_JACK
+4,DS1,2.54mm Pitch single line,1,16 Pin Female Header
+5,C2,"Electrolyte 8x10.5 , SMD",1,"100uF,25v Capacitor"
+6,"D1,D2,D3,D4,D5",L_1206,5,Green LED
+7,IC1,SOT-223,1,LM1117-5V Regulator
+8,"P1,P2,P3",2.54mm Pitch Dual line,3,3X3 Female Header
+9,"P4,P5,P6,P7",2.54mm Pitch single line,4,8Pin Female Header
+10,Q1,TO-92,1,BC547 Transistor
+11,RR1,"Resistor_Array_SIP8, 9 pin",1,10K Pull up array
+12,RV1,Through hole ,1,10K preset
+13,SW1,Through hole,1,Slide switch
+14,"SW2,SW3,SW4",Through hole,3,Tactile switch
+15,U1,QFN-28,1,CP2102-GMR
+16,U2,DIP-40,1,IC Base
+17,X1,Crystal_HC49,1,11.0592MHz CRYSTAL
+18,"C1,C3",C_0603,2,0.1uF
+19,"C4,C5",C_0603,2,22pF
+20,"R1,R3,R8",C_0603,3,1k
+21,R2,C_0603,1,4.7k
+22,R4,C_0603,1,100r
+23,"R5,R10,R11,R12,R13",C_0603,5,470r
+24,"R9,R6,R7",C_0603,3,10k
+25,,DIP-40,1,W78E052D
